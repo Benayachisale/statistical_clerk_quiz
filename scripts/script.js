@@ -163,7 +163,7 @@ function updateProgress(){
     let percentage=Math.round((current/total)*100);
     console.log(percentage)
     
-    bar.style.width=percentage
+    bar.style.width=`${percentage}%`;
 }
 
 updateProgress()

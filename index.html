@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DCSA quiz test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar navbar-fixed bg-success text-white d-flex justify-content-center mb-5" >
+        <h3 class="text-white bold">
+            CLERK ONLINE QUESTIONS
+        </div>
+    </div>
+
+    <div class="account d-flex justify-content-center align-content-center mt-5">
+  <!-- details from local storage database named 'database' with objects {name:string ,currentQuestion:number} -->
+        <h6 class="fw-bold"><i class="bi bi-person-circle"></i>NAME:<span id="name"></span class="fw-light"></h6>
+         <h6 class="ms-3 fw-light"><i class="bi bi-trophy-fill"></i>Progress:<span id="progress"></span class="fw-light"></h6>
+
+    </div>
+    <div id="feedback" class="m-3">
+      <!-- dynamically generated feedback if user is right or wrong -->
+    </div>
+
+
+<center>
+    <i class="bi bi-question-circle-fill"></i>
+</center>
+  <div class="h-50 container mt-2">
+    <div id="question" class="text-center fs-3 fw-bold mb-3">
+      <!-- dynamically genereted question -->
+    </div>
+    <div id="questions" class="mb-3">
+      <!-- dynamically generated multiple choice question -->
+    </div>
+    <button id="submit" class="btn btn-success btn-lg">Submit</button>
+
+  </div>
+  <center>
+      <div class="fw-light mb-1">your progress</div>
+  <div class="d-flex-row  align-content-center justify-content-center" style="width:90%">
+  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" id="bar"></div>
+</div>
+</div>
+  
+  <div class=" bg-success mt-3 text-white py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+          <div class="m-1">
+              While this service remains completely free, your voluntary support would be immensely appreciated <br>
+              <a href class="btn btn-info text-white" href="donate.html">donate</a>
+          </div>
+        <p class="small mb-4" style="font-size: 0.9rem;">
+          "Prepare for your CLERK interview with confidence everywhere! This free quiz web app features more than 100 essential questions covering Universal Health Coverage, disease prevention, patient care, and community health. Test your knowledge, track your progress, and identify areas for improvement. Perfect for statistical clerk preparing for interviews in Malawi's healthcare system. Sharpen your skills – one question at a time!"
+        </p>
+        
+        <h6 class="fw-bold mb-4">Created by Benaya Chisale</h6>
+        
+        <div class="d-flex justify-content-center gap-3 mb-3">
+          <a href="tel:+265992605260" class="text-white text-decoration-none">
+            <i class="bi bi-telephone-fill me-1"></i> 0992605260
+          </a>
+          
+          <a href="https://wa.me/+265992605260" class="text-white text-decoration-none">
+            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+          </a>
+          
+          <a href="https://www.facebook.com/benaya.chisale" class="text-white text-decoration-none">
+            <i class="bi bi-facebook me-1"></i> Facebook
+          </a>
+        </div>
+        
+        <div class="text-muted small">
+          &copy; <span id="current-year"></span> CLERK Interview Prep. All rights reserved.
+        </div>
+        <button class="btn btn-danger" id="reset">reset game</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this script to your JS file or before </body> -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
